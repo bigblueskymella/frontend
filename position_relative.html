@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_relative</title>
+    <style>
+        .static{
+            width: 300px;
+            height: 200px;
+            background-color:lightblue;
+            position: static; /*문서 흐름에 맞추어 배치 (기본값)*/
+        }
+        .relative-1{
+            background-color:blue;
+            width: 300px;
+            height: 200px;
+            position: relative; /*상대적인*/
+        }
+        .relative-2{
+            background-color:green;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            left: 100px;
+            top: -50px;
+        }
+        .fixed{
+            background-color:plum;
+            width: 150px;
+            height: 150px;
+            position: fixed; /*고정 (광고,공지)*/
+            right: 50px;
+            top: 50px;
+        }
+        .sticky{
+            width: 80px;
+            height: 80px;
+            background-color: cadetblue;
+            position: sticky;
+            top: 25px; /*sticky는 top 필수*/
+        }
+    </style>
+</head>
+<body>
+    <h1>position_relative</h1>
+    <div class="static">박스1</div>
+    <div class="relative-1">박스2</div>
+    <div class="relative-2">박스3</div>
+    <div class="fixed">박스4 <br>공지사항스크롤 생겼을 때</div>
+    <div class="sticky">박스5 <br> top 5px 일 때 고정</div>
+    <pre>
+        종합) 낮과 밤의 기온차 크겠음 건강관리 유
+        의, 내일 오후부터 모레 오후 사이 제주도 가끔 비
+○ (오늘) 전국 대체로 맑겠으나 제주도 가끔 구름많음
+○ (내일) 전국 구름많다가 차차 흐려짐, 제주도
+ 오후(12~18시)부터 가끔 비, 강원남부동해안과 경
+ 북동해안 오전(09~12시)부터 오후(12~18시) 사이 빗방울 곳
+○ (모레) 전국 대체로 흐리다가 중부지방 오전부터, 남부지
+방 오후부터 차차 맑아짐, 제주도 오후(12~18시)까지 가끔 비
+□ 예상 강수량(19~20일)
+부터 가끔 비, 강원남부동해안과 경
+ 북동해안 오전(09~12시)부터 오후(12~18시) 사이 빗방울 곳
+○ (모레) 전국 대체로 흐리다가 중부지방 오전부터, 남부지
+방 오후부터 차차 맑아짐, 
+부터 가끔 비, 강원남부동해안과 경
+ 북동해안 오전(09~12시)부터 오후(12~18시) 사이 빗방울 곳
+○ (모레) 전국 대체로 흐리다가 중부지방 오전부터, 남부지
+방 오후부터 차차 맑아짐, </pre>
+<pre>
+    종합) 낮과 밤의 기온차 크겠음 건강관리 유
+    의, 내일 오후부터 모레 오후 사이 제주도 가끔 비
+○ (오늘) 전국 대체로 맑겠으나 제주도 가끔 구름많음
+○ (내일) 전국 구름많다가 차차 흐려짐, 제주도
+오후(12~18시)부터 가끔 비, 강원남부동해안과 경
+북동해안 오전(09~12시)부터 오후(12~18시) 사이 빗방울 곳
+○ (모레) 전국 대체로 흐리다가 중부지방 오전부터, 남부지
+방 오후부터 차차 맑아짐, 제주도 오후(12~18시)까지 가끔 비
+□ 예상 강수량(19~20일)
+부터 가끔 비, 강원남부동해안과 경
+북동해안 오전(09~12시)부터 오후(12~18시) 사이 빗방울 곳
+○ (모레) 전국 대체로 흐리다가 중부지방 오전부터, 남부지
+방 오후부터 차차 맑아짐, 
+부터 가끔 비, 강원남부동해안과 경
+북동해안 오전(09~12시)부터 오후(12~18시) 사이 빗방울 곳
+○ (모레) 전국 대체로 흐리다가 중부지방 오전부터, 남부지
+방 오후부터 차차 맑아짐, 
+
+</pre>
+</body>
+</html>
