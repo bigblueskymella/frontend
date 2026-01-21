@@ -1,0 +1,105 @@
+/* =====================
+   기본 설정
+===================== */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  background: #f5f6f7;
+  padding: 30px;
+  color: #333;
+}
+
+/* 제목 */
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* =====================
+   폼 박스
+===================== */
+form {
+  width: 450px;
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #dcdcdc;
+}
+
+/* =====================
+   필드 그룹
+===================== */
+fieldset {
+  border: 1px solid #cfd8dc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: bold;
+  color: #1976d2; /* 파란 포인트 */
+}
+
+/* =====================
+   라벨 컬럼
+===================== */
+label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+
+/* =====================
+   입력 컬럼
+===================== */
+input,
+select,
+textarea {
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #cfd8dc;
+  margin-bottom: 10px;
+}
+
+/* 텍스트 입력류 */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="phone"],
+input[type="brith"],
+select,
+textarea {
+  width: 300px;
+}
+
+/* textarea */
+textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* =====================
+   라디오 / 체크박스
+===================== */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+/* =====================
+   버튼
+===================== */
+input[type="submit"] {
+  padding: 8px 18px;
+  border: none;
+  background: #1e88e5;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #1565c0;
+}

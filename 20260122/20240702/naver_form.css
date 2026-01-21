@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6f7;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 20px 0 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row input,
+.row select {
+  flex: 1;
+}
+
+label {
+  font-size: 14px;
+}
+
+.auth-btn {
+  width: 40%;
+  background: #2db400;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2db400;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
