@@ -1,0 +1,144 @@
+<!DOCTYPE html> <!-- HTML5 정의문/선언문 -->
+<html lang="ko"> <!-- 영어권en 한글 ko -->
+<head>
+    <meta charset="UTF-8"> <!--문자셋 한글이 깨지지 않게 인코딩-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제2-9 텍스트 꾸미기 </title> <!--웹문서의 제목 정의/ 검색엔진 최적화-->
+</head>
+<body>
+    <h3>텍스트 꾸미기</h3>
+    <hr>
+    <p>
+        <b>진하게</b><br>
+        <strong>중요한</strong><br>
+        <em>강조</em><br>
+        <i>이탤릭으로 강조</i><br>
+        <b><i>진하게 이탤릭으로 강조</i></b><br>
+        보통문자 <small>한 단계 작은 문자</small><br>
+        <del>삭제</del><br>
+        <ins>추가</ins><br>
+        보통문자의 <sup>윗첨자 </sup> <!--shift+alt+아래방향--> <br>
+        보통문자의 <sub>아래첨자 </sub> <br>
+        <mark>하이라이팅</mark><br>
+    </p>
+    <h1>웹사이트의 모습을 기술하기 위한 마크업 언어.</h1>
+    프로그래밍 언어가 아니라 <strong>마크업 정보</strong>를 표현하는 <b>마크업 언어</b>로 문서의 내용 이외의 문서
+    언어라는 뜻이다. <br>
+    <!-- strong : 강조할 때 굵게 표시
+         b : 단순히 굵게 표시 -->
+    
+    <em> 중요한 내용을 담고 있는 em태그 </em>
+    <i> 단순히 이탤릭체로 표시 </i>
+    <p> 웹의 창시자인 팀 버너스 리 <q cite="http://www.w3.org/standards/webdesign/accessibility"> 
+        웹의 힘은 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수 요소이다.
+    </q>라는 말로 웹 접근성을 설명한다.</p> 
+    <!-- q : 인용 내용 표시하기 -->
+
+    <p> 루비(Ruby)는 1995년 일본의 프로그래머인 
+        마츠모토 유키히로 (<ruby>松本行弘
+        <rt>まつもとゆきひろ</rt> </ruby>)가 
+        만든 프로그래밍 언어입니다. </p>
+
+    <ruby>윗주<rt> ruby </rt></ruby> 
+    윗주 (루비ruby)사용
+    <ruby>아래글자<rt>윗글자</rt></ruby> <br><br>
+
+    <p><b><abbr title="Internet of Things">IoT
+    </abbr>
+    </b>란 각종 사물에 센서..</p>
+    <p>내가 경험한 <cite>'비포선셋'</cite>중</p>
+    
+    <!-- 이미지 확장자 설명 -->
+    <img src="images/루피.jpg" alt="이미지가 손상되었거나 
+    열리지 않을 경우 대체할 텍스트" width="100px">
+    <!--
+        GIF : 표시할 수 있는 색상 수가 최대 256가지이지만
+            다른 이미지 파일 형식에 비해 크기가 작다.
+            아이콘, 불릿 등 작은 이미지에 주로 사용
+            투명한 배경이나 움직이는 이미지를 만들 수 있다.
+        JPG / JPEG : 사진을 위해 개발된 형식
+            gif보다 다양한 색상, 명암 표현
+            저장을 반복하다 보면 화질이 떨어진다.
+        PNG : 투명 배경을 만들 수 있고 다양한 색상 표현.
+            네트워크용으로 개발되어 최근 많이 사용.
+    -->
+    <img src="images/1a132dee024ad10ac3a14dcb69ca0755.gif" alt="gif이미지" width="100px">
+    <img src="images/뽀로로투명한배경.png" alt="png이미지" width="150px">
+
+    <h3> ul : unordered list 목차가 없는 리스트 </h3>
+    <ul> 프론트 엔드 : 사용자에게 보여지는 부분
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3> ol : ordered list 목차가 있는 리스트 </h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <mark>리코타치즈 만들기</mark>
+    <p><b>재료 : </b> 우유, 생크림, 소금, 레몬즙 </p> 
+
+    <h2>리코타치즈 샐러드 만들기</h2>
+    <ol type="a">
+        <li>위에서 만든 리코타치즈를 이용해서</li>
+        <li>샐러드를 만들어 봅니다.</li>
+    </ol>
+
+    <dl> <!--정의 리스트 79쪽-->
+        <dt>시판용 소스</dt> <!--용어-->
+        <dd>다양한 시판용 소스가 있다.</dd> <!--설명-->
+    </dl>
+
+    <!-- ol 태그 77쪽 -->
+    <!-- 
+        type : 마커 종류
+             type="1" (디폴트) 1, 2, 3, ...
+             type="A" A, B, C, ...
+             type="a" a, b, c, ...
+             type="I" I, II, III, ...
+             type="i" i, ii, iii, ...
+
+        start : 마커의 시작 값
+            예) start="5" 5, 6, 7, ... (5부터 시작)
+    -->
+
+    중첩리스트
+    ul 안에 li 안에 ol 과 li 
+    dl dt dd 
+    <ul>
+        <li>1일차
+            <ol type="a">
+                <li>해녀박물관</li>
+                <li>낚시체험</li>
+            </ol>
+        </li>
+        <li>2일차
+            <ol type="A" start="3">
+                <li>용눈이오름</li>
+                <li>만장굴</li>
+                <li>카약체험</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!--설명 목록 만들기-->
+    <!--description list-->
+    <!--dt 이름(단어명) dd 값(설명)-->
+    <dl>
+        <dt>올레 1코스</dt>
+        <dd>코스 : 시흥 초등학교 옆 - 광치기 해변</dd>
+        <dd>거리 : 14.6km(4~5시간)</dd>
+        <dd>난이도 : 중</dd>
+
+        <dt>올레 2코스</dt>
+        <dd>코스 : 광치기 해변 - 온평 포구</dd>
+        <dd>거리 : 15.5km(4~5시간)</dd>
+        <dd>난이도 : 중</dd>
+    </dl>
+
+</body>
+</html>
