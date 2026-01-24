@@ -1,7 +1,9 @@
-body {
+main {
   font-family: Arial, sans-serif;
   background: #f5f6f7;
   padding: 20px;
+  width: 450px;
+  border: 1px solid lightgrey;
 }
 
 h1 {
@@ -12,7 +14,6 @@ h1 {
 form {
   background: #fff;
   padding: 20px;
-  border-radius: 6px;
 }
 
 h2 {
@@ -21,30 +22,35 @@ h2 {
 }
 
 input, select {
-  width: 100%;
+  /* width: 100%; */
+  width: 100px;
   padding: 12px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   font-size: 14px;
 }
 
-.row {
-  display: flex;
-  gap: 8px;
-}
-
-.row input,
-.row select {
-  flex: 1;
-}
-
-label {
+.gender {
   font-size: 14px;
+  width: 30px;
+}
+.email{
+  width: 300px;
+}
+.nation {
+  width: 300px;
+}
+.tel{
+  width: 200px;
+}
+.ver{
+  width: 300px;
 }
 
 .auth-btn {
-  width: 40%;
+  width: 120px;
   background: #2db400;
+  padding: 10px;
   color: #fff;
   border: none;
   font-size: 14px;

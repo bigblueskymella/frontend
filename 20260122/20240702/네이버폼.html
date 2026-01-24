@@ -6,9 +6,8 @@
   <link rel="stylesheet" href="naver_form.css">
 </head>
 <body>
-
+  <main>
 <h1>회원가입</h1>
-
 <form>
 
   <h2>생년월일</h2>
@@ -24,37 +23,29 @@
   </div>
 
   <h2>성별</h2>
-  <div class="row">
-    <label><input type="radio" name="gender"> 남자</label>
-    <label><input type="radio" name="gender"> 여자</label>
-    <label><input type="radio" name="gender"> 선택안함</label>
-  </div>
+    <label><input class="gender" type="radio" name="gender"> 남자</label>
+    <label><input class="gender" type="radio" name="gender"> 여자</label>
+    <label><input class="gender" type="radio" name="gender"> 선택안함</label>
+ 
 
   <h2>이메일 (선택)</h2>
-  <input type="email" placeholder="example@email.com">
+  <input class="email" type="email" placeholder="example@email.com">
 
   <h2>휴대전화</h2>
-  <div class="row">
-    <select>
+
+    <select class="nation">
       <option>대한민국 +82</option>
     </select>
-  </div>
-
-  <div class="row">
-    <input type="text" placeholder="전화번호 입력">
+    <input class="tel" type="tel" placeholder="전화번호 입력">
     <button type="button" class="auth-btn">인증번호 받기</button>
-  </div>
-
-  <input type="text" placeholder="인증번호를 입력하세요">
-
-  <button type="submit" class="submit-btn">가입하기</button>
-
+    <input class="ver" type="text" placeholder="인증번호를 입력하세요">
+    <button type="submit" class="submit-btn">가입하기</button>
 </form>
 
 <p class="footer-text">
   이용약관 | 개인정보처리방침 | 고객센터<br>
   © 2026 Sample Corp.
 </p>
-
+</main>
 </body>
 </html>
