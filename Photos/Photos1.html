@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 웹 연습 예제</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+      <div class="start">
+        <button class="hamburger">&#9776;</button>
+        <h1>Photos</h1>
+      </div>
+      
+      <form class="search" onsubmit="return false;">
+        <input placeholder="검색할 사진의 제목을 입력해주세요.">
+        <button>검색</button>
+      </form>
+      
+      <div class="end">
+        <button class="icon">&#128269;🔍</button>
+        <div class="profile"></div>
+      </div>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><span>🥗</span> <span>메뉴 1</span></li>
+      <li><span>🥗</span> <span>메뉴 2</span></li>
+      <li><span>🥗</span> <span>메뉴 3</span></li>
+    </ul>
+  </nav>
+
+  <main>
+  <section>
+    <!-- 카드 반복 -->
+    <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article>     
+    <!-- 동일 카드 반복 -->
+        <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> <article class="card">
+      <img src="images/thumbnail.jpg" alt="">
+      <div class="info">
+        <div class="profile"></div>
+        <div>
+          <h3>사진 제목</h3>
+          <p class="owner">게시자</p>
+          <p class="meta">좋아요 55회 · 1시간 전</p>
+        </div>
+      </div>
+    </article> 
+          
+  </section>
+</main>
+<!-- <script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('is_open');
+  });
+  // 한줄로 해도 된다.
+  // <button class="header_hamburger" onclick="document.body.classList.toggle('nav_open')">☰</button>
+</script> -->
+</body>
+</html>

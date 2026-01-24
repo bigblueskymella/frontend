@@ -1,0 +1,296 @@
+/* =========================
+   RESET reset.css
+========================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 3px #000;
+  z-index: 20;
+}
+
+.header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 16px;
+}
+
+.header_start {
+  height: 40px;
+  line-height: 40px;
+}
+
+.header_hamburger {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.header_title {
+  font-size: 1.2rem;
+  margin-left: 6px;
+}
+
+.header_center {
+  width: 50%;
+}
+
+.header_form {
+  display: flex;
+  max-width: 100%;
+}
+
+.header_input_text {
+  width: calc(100% - 60px);
+  height: 40px;
+  padding: 0 6px;
+  border: 1px solid gray;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.header_input_button {
+  width: 60px;
+  height: 40px;
+  border: 1px solid gray;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.header_end {
+  display: flex;
+}
+
+.header_search {
+  display: none;
+  margin-right: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.header_profile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  background-color: green;
+  background-image: url(images/lupy.jpg);
+  background-size: cover;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav_wrapper {
+  min-width: 200px;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  padding-top: 80px;
+}
+
+.nav_wrapper li {
+  display: flex;
+  padding: 10px 16px;
+}
+
+.nav_wrapper li:hover {
+  background-color: #eaeaea;
+}
+
+.nav_icon {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.nav_menu {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: transparent;
+}
+
+/* =========================
+   THUMBS (메인 콘텐츠)
+========================= */
+.thumbs_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 60px 0 0 200px;
+  padding: 20px 10px 0;
+}
+
+.thumbs_item {
+  width: 25%;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.thumbs_thumbnail {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.thumbs_info {
+  display: flex;
+}
+
+.thumbs_profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: green;
+  background-image: url(images/lupy.jpg);
+  background-size: cover;
+}
+
+.thumbs_text {
+  width: calc(100% - 36px);
+  padding-left: 10px;
+}
+
+.thumbs_text_title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.thumbs_text_owner {
+  font-size: 1rem;
+  color: #aeaeae;
+  margin-bottom: 0.2em;
+}
+
+.thumbs_text_anal {
+  font-size: 0.9rem;
+  color: #aeaeae;
+}
+
+/* HEADER 반응형 */
+@media screen and (max-width: 768px) {
+  .header_title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header_center {
+    display: none;
+  }
+  .header_search {
+    display: block;
+  }
+}
+/* NAV 반응형 */
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    display: none;
+  }
+  .nav_wrapper {
+    /* 억지로 버티지 말고 0까지 줄어들어도 돼 */
+    min-width: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .nav_wrapper {
+    /* display: none; */
+    min-width: 0;
+  }
+}
+
+/* THUMBS 반응형 */
+@media screen and (max-width: 1024px) {
+  .thumbs_item {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .thumbs_wrapper {
+    margin-left: 60px;
+  }
+  .thumbs_item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .thumbs_wrapper {
+    margin-left: 0;
+    padding: 20px 0 0;
+  }
+  .thumbs_item {
+    width: 100%;
+  }
+}
+
+/* JS 토글 부분 */
+/* 기본 상태: 닫힘 */
+.nav {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/* 열렸을 때 */
+/* is_open은 상태 이름 */
+.nav.is_open {
+  transform: translateX(-100%);
+}
