@@ -1,78 +1,81 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        /* 1. 라디오 버튼은 화면에서 숨김 */
-        input[name="tab-group"] {
-            display: none;
-        }
-
-        /* 2. 탭 버튼 스타일 (Label) */
-        .tab-button {
-            display: inline-block;
+        .tab-button{
             width: 150px;
-            padding: 10px 0;
-            text-align: center;
+            padding: 10px 40px;
             cursor: pointer;
-            background: #eee;
-            border: 1px solid #ccc;
         }
-
-        /* 3. 탭 내용 스타일 (기본 숨김) */
-        .tab-content {
-            display: none;
-            border: 1px solid #333;
+        .tab-content{
+            border: 1px solid;
             width: 420px;
             padding: 20px;
-            /*margin-top: -1px; /* 버튼과 테두리 겹치기 */
+            display: none;
         }
-
-        /* 💡 핵심: 체크된 라디오 버튼의 '다음' 라벨 스타일 변경 */
-        input#tab1:checked + label,
-        input#tab2:checked + label,
-        input#tab3:checked + label {
+        .tab-button.active{
             background-color: pink;
-            font-weight: bold;
         }
-
-        /* 💡 핵심: 체크된 라디오 버튼의 '형제' 중 해당 컨텐츠만 보여주기 */
-        #tab1:checked ~ #content1,
-        #tab2:checked ~ #content2,
-        #tab3:checked ~ #content3 {
+        .tab-content.active{
             display: block;
         }
     </style>
 </head>
 <body>
-
     <div class="tabs">
-        <!-- 라디오 버튼 그룹 (동일한 name을 가져야 함) -->
-        <input type="radio" name="tab-group" id="tab1" checked>
-        <label for="tab1" class="tab-button">탭 1</label>
-
-        <input type="radio" name="tab-group" id="tab2">
-        <label for="tab2" class="tab-button">탭 2</label>
-
-        <input type="radio" name="tab-group" id="tab3">
-        <label for="tab3" class="tab-button">탭 3</label>
-
-        <!-- 탭 내용들 (라디오 버튼들과 형제 관계여야 함) -->
-        <div id="content1" class="tab-content">
-            <h3>탭 1의 제목</h3>
-            <pre>1111111 탭 내용입니다.</pre>
-        </div>
-        
-        <div id="content2" class="tab-content">
-            <h3>탭 2의 제목</h3>
-            <pre>2222222 탭 내용입니다.</pre>
-        </div>
-
-        <div id="content3" class="tab-content">
-            <h3>탭 3의 제목</h3>
-            <pre>3333333 탭 내용입니다.</pre>
-        </div>
+        <button class="tab-button active" onclick="openTab(event, 'tab1')">탭 1</button>
+        <button class="tab-button" onclick="openTab(event, 'tab2')">탭 2</button>
+        <button class="tab-button" onclick="openTab(event, 'tab3')">탭 3</button>
+    </div>
+    <div id="tab1" class="tab-content">
+        <h3> 탭 1의 제목</h3>
+        <pre>
+            1111111탭의 내용입니다. 
+            탭 1의 내용입니다. 
+            탭 1의 내용입니다. 
+        </pre>
+    </div>
+    <div id="tab2" class="tab-content">
+        <h3> 탭 2의 제목</h3>
+        <pre>
+            222222탭의 내용입니다. 
+            탭 2의 내용입니다. 
+            탭 2의 내용입니다. 
+        </pre>
+    </div>
+    <div id="tab3" class="tab-content">
+        <h3> 탭 3의 제목</h3>
+        <pre>
+            3333333탭의 내용입니다. 
+            탭 3의 내용입니다. 
+            탭 3의 내용입니다. 
+        </pre>
     </div>
 
+    <script>
+        // ✅ 페이지 열리면 첫 번째 탭 보이게
+        document.getElementById('tab1').style.display = 'block';
+        // let tab1 = document.getElementById('tab1')
+        // tab1.style.display = 'block';
+
+        function openTab(evt, tabName){ // 매개변수
+            // 모든 탭 내용을 안 보이게
+            const tabContents = document.querySelectorAll(".tab-content");
+            for(const content of tabContents){
+                content.style.display = 'none';
+            }
+            // 모든 탭 버튼에서 active 클래스를 제거
+            const tabButtons = document.querySelectorAll(".tab-button");
+            for(const button of tabButtons){
+                button.classList.remove('active');
+            }
+            // 선택한 탭 내용 보여주고 active 클래스를 추가
+            document.getElementById(tabName).style.display = 'block';
+            evt.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
 </html>
