@@ -1,10 +1,12 @@
     .product-image {
-      position: relative;
+      /*🟠1️⃣내부의 점들이 엉뚱한 곳으로 튀어나가지 않게*/
+      position: relative; 
       width: 600px;
     }
 
-    /* 이미지는 텍스트처럼 취급되기에
+    /* 1️⃣이미지는 텍스트처럼 취급되기에
     레이아웃에 쓰려면 block으로 바꿔주는 게 안전 */
+    /* 이미지 하단의 미세한 공백을 제거하고 영역을 꽉 채움.  */
     .product-image img {
       width: 100%;
       display: block;
@@ -12,9 +14,10 @@
 
     /* 🔘 동그라미 공통*/
     .hotspot {
+      /*🟠2️⃣점 개별 위치에 대한*/
       position: absolute;
       display: flex;
-      align-items: center;
+      /* align-items: center; */
 
       width: 18px;
       height: 18px;
@@ -24,30 +27,31 @@
       cursor: pointer;
 
       /* 기본은 숨김 (1차🔘보여주기) */
-      opacity: 0;
+      /* opacity: 0; */
       transform: scale(0.8);
       transition: 0.5s ease;
     }
 
-    /* 이미지 hover 시 포인트 등장 */
+    /* 2️⃣이미지 hover 시 포인트 등장 */
     .product-image:hover .hotspot {
       opacity: 1;
       transform: scale(1);
     }
-    /* 🔘 개별 위치 */
+    /* 🔘 2️⃣개별 위치 */
     .hotspot-1 { top: 30%; left: 40%; }
     .hotspot-2 { top: 60%; left: 20%; }
     .hotspot-3 { top: 45%; left: 70%; }
 
     /* 툴팁 🔴hotspot이 부모*/
     .tooltip {
-      /* position: absolute; */
-      /*top: 50%; /*translateY(-50%)기준점*/
+      /* 3️⃣점의 바로 옆에 붙어 있어야 하므로 다시 absolute를 사용 */
+      position: absolute;
+      top: 50%; /*4️⃣translateY(-50%)기준점*/
       /* left: 25px; */
       /* CSS에서 유일하게 정확한 중앙 정렬 방식 중 하나 */
-      /* transform: translateY(-50%); */
-      /*flex-shrink: 0; /* 🔴1️⃣줄어들지 않을게 */
-      min-width: 140px; /* 🔴2️⃣또는 이렇게*/
+      transform: translateY(-50%); /*4️⃣*/
+      /*flex-shrink: 0; /* 🔴1줄어들지 않을게 */
+      min-width: 140px; /* 🔴2또는 이렇게*/
       margin-left: 25px;
       background: white;
       padding: 10px;
@@ -58,14 +62,14 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 
       opacity: 0;
-      /* 마우스가 tooltip 위에 올라가도
+      /* 3️⃣마우스가 tooltip 위에 올라가도
       hover 판정은 dot만 인식 
       툴팁은 “보이기만 하는 존재” */
       pointer-events: none; 
       transition: 0.2s ease;
     }
 
-    /* 포인트 hover 시 설명 표시 */
+    /* 4️⃣포인트 hover 시 설명 표시 */
     .hotspot:hover .tooltip {
       opacity: 1;
     }
