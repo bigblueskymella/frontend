@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #wrap{
+      /* (가변크기로 만들 박스 너비 / 가변크기 감쌀 박스 너비) *100 */
+      /* (300px/ 960px)*100=31.25% */
+      /* 960px */
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 4px solid #000;
+      background: #f7e041;
+    }
+    #wrap p{
+      /* 40px / 960px */
+      /* 좌우 패딩을 가변으로 💛1.기본방법 */
+      /* padding: 40px 4.16666%; */
+
+      /* 좌우 패딩을 가변으로 💛2.기본방법 */
+      /* 600을 유지해야 하는 박스에는 -100인 500에서 나눔 */
+      /* 500px / 960px */
+      width: 52.083333%;
+      /* 좌우 50씩 100이 됨 */
+      /* 50px / 960px */
+      padding: 50px 5.20833333%;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <p>...텍스트 생략...</p>
+  </div>
+</body>
+</html>
