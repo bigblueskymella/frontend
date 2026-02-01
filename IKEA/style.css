@@ -51,11 +51,11 @@
       /* CSS에서 유일하게 정확한 중앙 정렬 방식 중 하나 */
       transform: translateY(-50%); /*4️⃣*/
       /*flex-shrink: 0; /* 🔴1줄어들지 않을게 */
-      min-width: 140px; /* 🔴2또는 이렇게*/
+      min-width: 120px; /* 🔴2또는 이렇게*/
       margin-left: 25px;
       background: white;
       padding: 10px;
-      width: 140px;
+      width: 120px;
       font-size: 13px;
       line-height: 1.4;
       border-radius: 4px;
@@ -73,3 +73,4 @@
     .hotspot:hover .tooltip {
       opacity: 1;
     }
+
