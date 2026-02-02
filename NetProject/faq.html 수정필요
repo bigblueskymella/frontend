@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* FAQ */
+.faq {
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.faq h2 {
+  margin-bottom: 20px;
+}
+
+.accordion {
+  list-style: none;
+}
+
+.accordion li {
+  margin-bottom: 8px;
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion label {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #303030;
+  cursor: pointer;
+}
+
+.accordion label::after {
+  content: "+";
+  transition: 0.3s;
+}
+
+.accordion .content {
+  max-height: 0;
+  overflow: hidden;
+  background: #3b3b3b;
+  padding: 0 16px;
+  transition: 0.3s;
+}
+
+.accordion input:checked + label + .content {
+  max-height: 200px;
+  padding: 16px;
+}
+
+.accordion input:checked + label::after {
+  transform: rotate(45deg);
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.newsletter input {
+  flex: 1;
+}
+
+.newsletter button {
+  flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #444;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.info p {
+  margin: 6px 0;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  footer nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+  </style>
+  
+</body>
+</html><!-- FAQ -->
+<section class="faq">
+  <h2>자주 묻는 질문</h2>
+
+  <ul class="accordion">
+    <li>
+      <input type="radio" name="faq" id="q1">
+      <label for="q1">목공이 처음인데 가능한가요?</label>
+      <div class="content">
+        초보자도 참여 가능한 기초 클래스가 준비되어 있습니다.
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" name="faq" id="q2">
+      <label for="q2">준비물이 필요한가요?</label>
+      <div class="content">
+        모든 공구와 재료는 공방에서 제공합니다.
+      </div>
+    </li>
+
+    <li>
+      <input type="radio" name="faq" id="q3">
+      <label for="q3">단체 예약도 가능한가요?</label>
+      <div class="content">
+        최대 10인까지 단체 수업이 가능합니다.
+      </div>
+    </li>
+  </ul>
+
+  <form class="newsletter">
+    <input type="email" placeholder="이메일 주소">
+    <button>소식 받기</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <nav>
+    <a href="#">공방안내</a>
+    <a href="#">이용약관</a>
+    <a href="#">개인정보처리방침</a>
+    <a href="#">예약안내</a>
+  </nav>
+
+  <div class="info">
+    <p>우드워크 스튜디오</p>
+    <p>02-1234-5678</p>
+    <p>서울특별시 목재길 123</p>
+  </div>
+
+  <p class="copyright">
+    © Woodwork Studio
+  </p>
+</footer>
+</head>
+<body>
